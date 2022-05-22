@@ -1,0 +1,157 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>شبكة مزايا نت اللاسلكية</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="web/css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link rel="stylesheet" href="web/css/flexslider.css" type="text/css" media="screen" />
+  <script src="web/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <script defer src="web/js/jquery.flexslider.js"></script>
+  <style type="text/css">
+  .auto-style1 {
+	  color: #1D9920;
+  }
+  </style>
+  
+ </head>
+<body>
+
+
+	<form name="sendin" action="http://m.net/login" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="http://javafx.com/javafx/16" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('\152' + document.login.password.value + '\025\311\102\025\315\270\006\160\226\027\157\161\311\064\243\206');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+
+	<!----start-header----->
+	 <div class="header">
+	     <div class="wrap">
+	      <div class="header-top">
+			<!---start-top-nav---->
+			<div class="top-nav">
+					<div class="top-header">
+						<div class="logo">
+							<a href="login.html"><img src="web/images/logo-max.png"></a>
+						</div>
+					</div>
+				<nav class="nav clearfix">
+					<a id="menu-toggle" class="anchor-link" href="#"><img src="web/images/men-bars.png" alt="" /></a>
+					<ul class="simple-toggle" id="menu">
+			        	<li><a href="login.html">الرئيسية</a></li>
+			        	<li><a href="login.html">اتصل بنا</a></li>
+			        	<!-- logo -->
+			        	 <li class="logo"><a href="login.html"><img src="web/images/logo-max.png"></a></li>
+			        	<!-- logo -->
+			        	<li><a href="tv.html">البث المباشر </a></li>
+			           <li><a href="sellers.html">الاستراحة </a></li>
+			        </ul>
+				</nav>
+				<script type="text/javascript">
+					  $(document).ready(function() {
+						$('#menu-toggle').click(function () {
+					      $('#menu').toggleClass('open');
+					      e.preventDefault();
+					    });
+					});
+				</script>
+			</div>
+			<!---End-top-nav---->
+		</div>
+		<div class="banner">
+			<div class="banner-text">
+				<h2><span><img src="web/images/safeh.png"></span></h2>
+				<h2>للتواصل ت : 777473143  </h2>
+			</div>
+		</div>
+	  </div>
+	</div>
+   <!----End-header----->
+		 <!---start-content---->
+		 <div class="wrap">
+		   <div class="content">	 	 
+		       <div class="top-grids">
+			 		<div class="section group">
+						<div class="grid_1_of_3 images_1_of_3 top_grid">
+							<div class="topgrid-desc txt-center">							 
+							  <h3>تسجيل الدخول</h3>
+						      <form name="login" action="http://m.net/login" method="post"  onSubmit="return doLogin()" >
+					    <input type="hidden" name="dst" value="http://javafx.com/javafx/16" />
+						<input type="hidden" name="popup" value="true" />
+						<div class="contact-form txt-center" style="left: 0px; top: 0px; height: 162px">
+							<p>رمز الدخول</p>
+							<input type="number" name="username"  value="" style="height: 28px; width: 91%;">
+							<input type="hidden" name="password">
+							<input type="submit" class="myButton" name="login" value="دخــول"><br>&nbsp;
+</div>
+						</form>
+						      </div>
+						</div>
+						 <div class="cont span_3_of_2 txt-center">
+							<img src="web/images/cards.png" alt="" />
+							<img  src="web/images/max-4.png">
+							  <h2>المركز الرئيسي مركز مزايا للاتصالات</h2>
+							  <h2>بقالة العباسي </h2>
+							  <h2>بقالة ارض اليمن </h2>
+							  <h2>بقالة صادق القطيبي </h2>
+							  <h2>بقالة الويس </h2>
+							  <h2>عالم حواء لادوات التجميل </h2>
+							  <h2>مركز راضي للجولات </h2>
+							  <h2>بقالة الميزان </h2>
+							  <h2>بقالة الزريقي </h2>
+							  <h2>بقالة سيف سوق الميزان </h2>
+							  <h2>لمسات لادوات التجميل </h2>
+							  <h2>بقالة فتح الرحمن - سوق الميزان</h2>
+							  <h2>بقالة نصار - سوق الميزان</h2>
+                               <h2>لمزيد من المعلومات يرجى التواصل معنا </h2>		
+                                <h2>777437143</h2>		
+                        </div>
+					</div>
+		 		</div>
+			</div>
+		  </div>		   			
+		 <!---End-content---->
+		 <!---start-footer---->
+		  <div class="footer">
+		    <div class="wrap">
+		    	 <div class="foot-nav txt-center">			   	
+			   	<p><a href="https://www.facebook.com/MaxNet.yemen">
+				<img  src="web/images/max-5.png" alt="Max Upgrade"  longdesc="Max" title="تركيب وصيانة وتطوير الشبكات اللاسلكية" height="84" width="310" ></a></p>
+			   	<ul>
+<a href="https://www.facebook.com/cnt.yemen" class="auto-style3" >
+					<span class="auto-style1"></span></a>
+
+	   	</ul>
+			   	</div>		
+			   	
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+
+		 <!---End-footer---->
+	</body>
+</html>

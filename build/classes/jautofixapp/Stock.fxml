@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jautofixapp.StockController">
+  <panes>
+    <TitledPane alignment="BOTTOM_RIGHT" animated="false" contentDisplay="RIGHT" prefHeight="556.0" prefWidth="1071.0" text="تعديل و مراجعة الاسعار ">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="table3" blendMode="DARKEN" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#SelectionFromTable3" prefHeight="177.0" prefWidth="762.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="cc1" prefWidth="75.0" text="الرقم التسلسلي" />
+                        <TableColumn fx:id="cc2" prefWidth="81.0" text="الكود" />
+                        <TableColumn fx:id="cc3" minWidth="0.0" prefWidth="160.0" text="بيانات الصنف" />
+                        <TableColumn fx:id="cc4" prefWidth="59.0" text="الوحدة" />
+                        <TableColumn fx:id="cc5" prefWidth="91.0" text="الكمية المتوفرة" />
+                        <TableColumn fx:id="cc6" minWidth="0.0" prefWidth="89.0" text="سعر التكلفة" />
+                        <TableColumn fx:id="cc7" minWidth="0.0" prefWidth="88.0" text="التسعيرة" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TableView>
+                  <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="204.0" prefWidth="774.0">
+                           <children>
+                              <HBox alignment="TOP_CENTER" nodeOrientation="RIGHT_TO_LEFT">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="171.0" layoutY="13.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="94.0">
+                                       <children>
+                                          <Label alignment="TOP_CENTER" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="24.0" prefWidth="109.0" text="الرقم التسلسلي" textAlignment="RIGHT">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="L0" alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="57.0" text="Label" textAlignment="CENTER">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="94.0">
+                                       <children>
+                                          <Label alignment="TOP_CENTER" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="60.0" text="الكود" textAlignment="RIGHT">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="L1" alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="57.0" text="Label" textAlignment="CENTER">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="183.0">
+                                       <children>
+                                          <Label text="التفاصيل " textAlignment="CENTER">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="L2" alignment="CENTER" text="Label">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="69.0">
+                                       <children>
+                                          <Label text="الوحدة" textAlignment="CENTER">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="L3" alignment="CENTER" text="Label">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="79.0">
+                                       <children>
+                                          <Label text="الكمية">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="L4" alignment="CENTER" text="Label">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </HBox>
+                              <Separator prefHeight="1.0" prefWidth="458.0">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox alignment="TOP_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="152.0" text="سعر التكلفة">
+                                       <HBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="L5" alignment="CENTER" disable="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="21.0" prefWidth="251.0">
+                                       <HBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="21.0" prefWidth="156.0" text="تسعيرة المحل" textAlignment="CENTER">
+                                       <HBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="L6" alignment="CENTER" disable="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="21.0" prefWidth="259.0">
+                                       <HBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="44.0" prefHeight="1.0" prefWidth="458.0">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="197.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#view_table3" text="اظهر القائمة" textAlignment="CENTER" textFill="#d94421">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="Ed_bt" mnemonicParsing="false" onAction="#editPrice" text="تعديل">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="S_bt" disable="true" mnemonicParsing="false" onAction="#SaveEditPrice" prefHeight="37.0" prefWidth="59.0" text="حفظ">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" text="الغاء">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+    </TitledPane>
+    <TitledPane alignment="TOP_RIGHT" animated="false" contentDisplay="RIGHT" text="المخزون غير المتوفر">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Separator prefHeight="1.0" prefWidth="458.0" />
+                  <Separator prefHeight="1.0" prefWidth="458.0" />
+                  <Button layoutX="35.0" layoutY="423.0" mnemonicParsing="false" text="العودة الى القائمة الرئيسة" />
+                  <Button layoutX="64.0" layoutY="365.0" mnemonicParsing="false" text="عرض" />
+                  <TableView fx:id="table2" blendMode="DARKEN" layoutX="106.0" layoutY="66.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="259.0" prefWidth="620.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="clv1" prefWidth="75.0" text="الرقم التسلسلي" />
+                        <TableColumn fx:id="clv2" prefWidth="81.0" text="الكود" />
+                        <TableColumn fx:id="clv3" minWidth="0.0" prefWidth="180.0" text="بيانات الصنف" />
+                        <TableColumn fx:id="clv4" prefWidth="39.0" text="الوحدة" />
+                        <TableColumn fx:id="clv5" prefWidth="110.0" text="الكمية المتوفرة" />
+                        <TableColumn fx:id="clv6" minWidth="0.0" prefWidth="79.0" text="التسعيرة" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane alignment="TOP_RIGHT" animated="false" prefHeight="687.0" prefWidth="1674.0" text="المخزون المتوفر حاليا ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table1" blendMode="DARKEN" layoutX="33.0" layoutY="134.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="259.0" prefWidth="698.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="cl1" prefWidth="75.0" text="الرقم التسلسلي" />
+                        <TableColumn fx:id="cl2" prefWidth="81.0" text="الكود" />
+                        <TableColumn fx:id="cl3" minWidth="0.0" prefWidth="180.0" text="بيانات الصنف" />
+                        <TableColumn fx:id="cl4" prefWidth="39.0" text="الوحدة" />
+                        <TableColumn fx:id="cl5" prefWidth="110.0" text="الكمية المتوفرة" />
+                        <TableColumn fx:id="cl6" minWidth="0.0" prefWidth="79.0" text="سعر التكلفة" visible="false" />
+                        <TableColumn fx:id="cl7" prefWidth="75.0" text="التسعيرة" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="549.0" layoutY="407.0" mnemonicParsing="false" onAction="#view_table1" prefHeight="25.0" prefWidth="91.0" text="عرض" />
+                  <Label layoutX="121.0" layoutY="39.0" prefHeight="27.0" prefWidth="199.0" text="المخزون المتوفر في المحل">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="623.0" layoutY="449.0" mnemonicParsing="false" text="عودة الى  لقائمة الرئيسة" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jautofixapp.SalesController">
+  <panes>
+    <TitledPane alignment="TOP_RIGHT" animated="false" contentDisplay="RIGHT" text="تعديل قائمة المبيعات للفاتورة" />
+    <TitledPane alignment="BOTTOM_RIGHT" animated="false" contentDisplay="RIGHT" prefHeight="556.0" prefWidth="1071.0" text="اضافة مبيعات">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseEntered="#GetSelection" prefHeight="530.0" prefWidth="1310.0">
+               <children>
+                  <Button fx:id="rest" layoutX="47.0" layoutY="146.0" mnemonicParsing="false" onAction="#reset" text="افراغ الحقول" />
+                  <Label layoutX="392.0" layoutY="194.0" text="اسم الزبون">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="RIGHT" layoutX="784.0" layoutY="108.0" prefHeight="17.0" prefWidth="60.0" text="الكود" textAlignment="RIGHT" />
+                  <Label layoutX="795.0" layoutY="124.0" text="التفاصيل " />
+                  <Label layoutX="802.0" layoutY="146.0" text="الوحدة" />
+                  <Label layoutX="594.0" layoutY="152.0" text="الكمية المطلوبة" />
+                  <Label layoutX="798.0" layoutY="170.0" text="التسعيرة" />
+                  <TableView fx:id="salesOrdertable" blendMode="DARKEN" layoutX="118.0" layoutY="263.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#GetSelectionSaleTable" prefHeight="217.0" prefWidth="720.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="75.60000000000014" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="11.600000000000136" AnchorPane.topAnchor="263.0">
+                    <columns>
+                      <TableColumn fx:id="cl1" prefWidth="75.0" text="الكود المخزني" />
+                      <TableColumn fx:id="cl2" prefWidth="210.00001525878906" text="تفاصيل" />
+                        <TableColumn fx:id="cl3" minWidth="6.0" prefWidth="88.0" text="الوحدة" />
+                        <TableColumn fx:id="cl4" prefWidth="97.0" text="الكمية" />
+                        <TableColumn fx:id="cl5" prefWidth="121.0" text="سعر البيع" />
+                        <TableColumn fx:id="cl6" prefWidth="143.0" text="المجموع" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="789.0" layoutY="90.0" text="الكود المخزني">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="362.0" layoutY="154.0" text="رقم العملية للفاتورة">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="AAA2" alignment="TOP_RIGHT" disable="true" layoutX="519.0" layoutY="175.0" prefHeight="25.0" prefWidth="53.0" />
+                  <TextField fx:id="gns" alignment="CENTER" layoutX="191.0" layoutY="158.0" />
+                  <TextField fx:id="AAA" alignment="TOP_RIGHT" layoutX="507.0" layoutY="151.0" prefHeight="25.0" prefWidth="77.0" />
+                  <Separator layoutX="245.0" layoutY="248.0" prefHeight="1.0" prefWidth="458.0" />
+                  <Button fx:id="AddToSales" layoutX="46.0" layoutY="178.0" mnemonicParsing="false" onAction="#AddSales" text="اضافة للجدول" />
+                  <Button layoutX="187.0" layoutY="555.0" mnemonicParsing="false" text="الغاء الفاتورة" />
+                  <Button fx:id="saveBtInv" layoutX="271.0" layoutY="555.0" mnemonicParsing="false" onAction="#sava_gotoDb" text="حفظ الفاتورة " />
+                  <Button layoutX="88.0" layoutY="555.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="فاتورة جديدة" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="430.0" layoutY="559.0" prefHeight="17.0" prefWidth="88.0" text="ريال يمني" textAlignment="CENTER" />
+                  <TextField fx:id="clint" alignment="CENTER" layoutX="167.0" layoutY="191.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Label fx:id="A1" alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="91.0" prefHeight="17.0" prefWidth="171.0" text="..." textAlignment="CENTER" />
+                  <Label fx:id="A2" alignment="CENTER" contentDisplay="CENTER" layoutX="519.0" layoutY="124.0" prefHeight="17.0" prefWidth="274.0" text="..." textAlignment="CENTER" />
+                  <Label fx:id="A4" alignment="CENTER" contentDisplay="CENTER" layoutX="718.0" layoutY="170.0" prefHeight="17.0" prefWidth="65.0" text="..." textAlignment="CENTER" />
+                  <Label fx:id="A3" alignment="CENTER" contentDisplay="CENTER" layoutX="677.0" layoutY="150.0" prefHeight="17.0" prefWidth="104.0" text="..." textAlignment="CENTER" />
+                  <Label layoutX="606.0" layoutY="177.0" text="اضافة سعر خاص للزبون" />
+                  <Button layoutX="511.0" layoutY="203.0" mnemonicParsing="false" onAction="#GetEnableForbutten" text="اضافة السعر " />
+                  <TableView fx:id="stqTable" blendMode="DARKEN" layoutX="26.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#GetSelection" prefHeight="129.0" prefWidth="558.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="c1" prefWidth="75.0" text="الكود المخزني " />
+                        <TableColumn fx:id="c2" prefWidth="81.0" text="الكود" />
+                        <TableColumn fx:id="c3" minWidth="0.0" prefWidth="180.0" text="بيانات الصنف" />
+                        <TableColumn fx:id="c4" prefWidth="39.0" text="الوحدة" />
+                        <TableColumn fx:id="c5" prefWidth="110.0" text="الكمية المتوفرة" />
+                        <TableColumn fx:id="c6" minWidth="0.0" prefWidth="79.0" text="التسعيرة" />
+                     </columns>
+                  </TableView>
+                  <TextField alignment="CENTER" layoutX="597.0" layoutY="53.0" prefHeight="25.0" prefWidth="265.0" />
+                  <Label layoutX="764.0" layoutY="33.0" text="ابحث في القائمة المتوفرة">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="728.0" layoutY="557.0" text="مجموع الفاتورة">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalofinv" alignment="CENTER" contentDisplay="CENTER" layoutX="525.0" layoutY="559.0" prefHeight="17.0" prefWidth="175.0" text="0.0" textAlignment="CENTER" />
+                  <Label fx:id="A11" alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="108.0" prefHeight="17.0" prefWidth="171.0" text="..." textAlignment="CENTER" />
+                  <Button fx:id="delBut" layoutX="35.0" layoutY="345.0" mnemonicParsing="false" onAction="#deletePurchaseRow" text="حذف مبيعات " />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane alignment="TOP_RIGHT" animated="false" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" text="تعديل قائمة المبيعات للفاتورة">
+         <content>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <SplitPane dividerPositions="0.5" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <TableView fx:id="tab1" blendMode="DARKEN" layoutX="10.0" layoutY="10.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#whenClickT1" prefHeight="146.0" prefWidth="546.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="n1" prefWidth="75.0" text="رقم الفاتورة " />
+                              <TableColumn fx:id="n2" prefWidth="73.0" text="العميل " />
+                              <TableColumn fx:id="n3" prefWidth="97.0" text="مجموع قيمة الفاتورة " />
+                              <TableColumn fx:id="n4" minWidth="2.0" prefWidth="89.0" text="الخصم" />
+                              <TableColumn fx:id="n5" minWidth="2.0" prefWidth="89.0" text="التاريخ" />
+                           </columns>
+                        </TableView>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane prefHeight="264.0" prefWidth="347.0">
+                                 <children>
+                                    <TableView fx:id="tab2" blendMode="DARKEN" nodeOrientation="RIGHT_TO_LEFT" prefHeight="146.0" prefWidth="546.0" tableMenuButtonVisible="true">
+                                       <columns>
+                                          <TableColumn fx:id="m1" prefWidth="75.0" text="الكود" />
+                                          <TableColumn fx:id="m2" prefWidth="115.0" text="تفاصيل" />
+                                          <TableColumn fx:id="m3" prefWidth="46.0" text="الوحدة" />
+                                          <TableColumn fx:id="m4" prefWidth="64.0" text="الكمية" />
+                                          <TableColumn fx:id="m5" prefWidth="75.0" text="سعر البيع" />
+                                          <TableColumn fx:id="m6" prefWidth="75.0" text="المجموع" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </items>
+                  </SplitPane>
+               </center>
+               <left>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+               </right>
+               <bottom>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Region prefHeight="71.0" prefWidth="867.0" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#getMyInvoicSale" text="Button" textAlignment="CENTER" />
+                     </children></VBox>
+               </bottom>
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </top>
+            </BorderPane>
+         </content>
+      </TitledPane>
+  </panes>
+</Accordion>

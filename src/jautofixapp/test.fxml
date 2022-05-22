@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+  <panes>
+    <TitledPane animated="false" text="untitled 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="untitled 2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="untitled 3">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </TitledPane>
+      <TitledPane alignment="TOP_RIGHT" animated="false" contentDisplay="RIGHT" text="تعديل قائمة المبيعات للفاتورة">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="416.0" layoutY="459.0" mnemonicParsing="false" text="افراغ الحقول" />
+                  <ComboBox fx:id="comb2" layoutX="439.0" layoutY="49.0" prefWidth="150.0" />
+                  <Label layoutX="287.0" layoutY="16.0" text="الزبون">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="RIGHT" layoutX="676.0" layoutY="338.0" prefHeight="17.0" prefWidth="60.0" text="الكود" textAlignment="RIGHT" />
+                  <Label layoutX="476.0" layoutY="338.0" text="التفاصيل " />
+                  <Label layoutX="694.0" layoutY="379.0" text="الوحدة" />
+                  <Label layoutX="572.0" layoutY="379.0" text="الكمية" />
+                  <Label layoutX="366.0" layoutY="379.0" text="سعر التكلفة" />
+                  <TableView fx:id="tableS" blendMode="DARKEN" layoutX="105.0" layoutY="152.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="146.0" prefWidth="546.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="s1" prefWidth="75.0" text="الكود" />
+                        <TableColumn fx:id="s2" prefWidth="115.0" text="تفاصيل" />
+                        <TableColumn fx:id="s3" prefWidth="46.0" text="الوحدة" />
+                        <TableColumn fx:id="s4" prefWidth="64.0" text="الكمية" />
+                        <TableColumn fx:id="s5" prefWidth="75.0" text="سعر البيع" />
+                        <TableColumn fx:id="s6" prefWidth="75.0" text="المجموع" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="129.0" layoutY="378.0" text="المجموع : ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="1.0" prefWidth="458.0" />
+                  <Label layoutX="625.0" layoutY="48.0" text="رقم العملية للفاتورة">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sc5" alignment="TOP_RIGHT" layoutX="208.0" layoutY="375.0" />
+                  <TextField fx:id="sc2" alignment="TOP_RIGHT" layoutX="89.0" layoutY="334.0" prefHeight="25.0" prefWidth="386.0" />
+                  <TextField fx:id="sc4" alignment="TOP_RIGHT" layoutX="421.0" layoutY="375.0" />
+                  <TextField fx:id="sc1" alignment="CENTER" layoutX="527.0" layoutY="334.0" />
+                  <ComboBox fx:id="sc3" layoutX="608.0" layoutY="375.0" prefHeight="25.0" prefWidth="68.0" />
+                  <Separator prefHeight="1.0" prefWidth="458.0" />
+                  <Button layoutX="515.0" layoutY="425.0" mnemonicParsing="false" text="اضافة مبيعات للفاتورة" />
+                  <Button layoutX="60.0" layoutY="446.0" mnemonicParsing="false" text="الغاء تعديل الفاتورة" />
+                  <Button layoutX="54.0" layoutY="413.0" mnemonicParsing="false" text="حفظ تغييرات الفاتورة " />
+                  <Button layoutX="396.0" layoutY="425.0" mnemonicParsing="false" text="تعديل تفاصيل الفاتورة" />
+                  <Label fx:id="Ls1" alignment="CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="58.0" prefHeight="17.0" prefWidth="88.0" text="0.0" textAlignment="CENTER" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="58.0" prefHeight="17.0" prefWidth="88.0" text="ريال يمني" textAlignment="CENTER" />
+                  <Label layoutX="311.0" layoutY="56.0" text="مجموع قيمة الفاتورة">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comb1" layoutX="439.0" layoutY="13.0" prefWidth="150.0" />
+                  <Label layoutX="613.0" layoutY="15.0" text="الرقم التسلسلي للفاتورة">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="117.0" layoutY="14.0" prefWidth="150.0" />
+                  <Button layoutX="246.0" layoutY="425.0" mnemonicParsing="false" text="حذف مبيعات من الفاتورة" />
+                  <Label fx:id="Ls2" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="380.0" prefHeight="17.0" prefWidth="88.0" text="0.0" textAlignment="CENTER" />
+                  <Separator layoutX="192.0" layoutY="395.0" orientation="VERTICAL" prefHeight="85.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+  </panes>
+</Accordion>
